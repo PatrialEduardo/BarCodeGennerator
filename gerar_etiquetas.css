@@ -1,0 +1,156 @@
+body {
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 36px 36px 36px;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3a4b;
+  margin-bottom: 28px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #2d3a4b;
+  font-weight: 500;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 8px 12px;
+  width: 260px;
+  border: 1px solid #cfd8dc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+}
+
+#produtos-list {
+  margin-top: 18px;
+}
+
+.produto-item {
+  margin-bottom: 14px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.btn-group {
+  margin: 18px 0 0 0;
+  display: flex;
+  gap: 14px;
+}
+
+.btn {
+  padding: 9px 22px;
+  border: none;
+  border-radius: 5px;
+  background: #e0e7ef;
+  color: #2d3a4b;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: #b0bec5;
+  color: #222;
+}
+
+.btn-primary {
+  background: #1976d2;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1256a3;
+}
+
+.btn-success {
+  background: #43a047;
+  color: #fff;
+  margin-top: 24px;
+  display: none;
+}
+
+.btn-success.show {
+  display: inline-block;
+}
+
+#etiquetas-preview {
+  margin-top: 36px;
+  background: #f9fafb;
+  padding: 24px 18px;
+  border-radius: 10px;
+  min-height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.linha-etiquetas {
+  display: flex;
+  margin-bottom: 38px;
+  gap: 4%;
+}
+
+.etiqueta {
+  width: 48%;
+  min-height: 160px;
+  border: 1.5px dashed #b0bec5;
+  border-radius: 8px;
+  padding: 14px 10px 0 10px;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.etiqueta-nome {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1976d2;
+  word-break: break-word;
+}
+
+.barcode-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .linha-etiquetas {
+    flex-direction: column;
+    gap: 0;
+  }
+  .etiqueta {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}

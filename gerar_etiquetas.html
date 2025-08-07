@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Etiquetas EAN-13</title>
+  <link rel="stylesheet" href="gerar_etiquetas.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Etiquetas EAN-13</h1>
+    <div class="form-group">
+      <label for="prefixo">Prefixo GS1 (7 Dígitos):</label>
+      <input type="text" id="prefixo" maxlength="7" required>
+    </div>
+    <div id="produtos-list"></div>
+    <div class="btn-group">
+      <button class="btn" onclick="adicionarProduto()">Adicionar Produto</button>
+      <button class="btn btn-primary" onclick="gerarEtiquetas()">Gerar Etiquetas</button>
+    </div>
+    <div id="etiquetas-preview"></div>
+    <button id="download-btn" class="btn btn-success" onclick="gerarPDF()">Gerar PDF</button>
+  </div>
+  <script src="gerar_etiquetas.js"></script>
+</body>
+</html>
